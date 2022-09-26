@@ -9,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
   //styles:["p{background:green; padding:5px; color:white}"]
 })
 export class EmpleadoComponent implements OnInit {
-  
   nombre="Juan";
   apellido="Biain";
+  lantokia="Praiskopedia";
+  
   edad=17;
   /*getEdad(){
     return this.edad;
@@ -20,7 +21,6 @@ export class EmpleadoComponent implements OnInit {
   
   lantokideika(value:String){ }
   habilitaCuadro=false;
-  
   
   usuRegistrado=false;
   
@@ -38,7 +38,6 @@ export class EmpleadoComponent implements OnInit {
       this.textoDeRegistro="Hara, joan zaigu erroldatua. KAKA!!!.";
     }
   }
-  
   getRegistrousuario(){
     this.usuRegistrado=false;
   }
@@ -52,13 +51,12 @@ export class EmpleadoComponent implements OnInit {
     //alert(event.target)
     //this.textoDeRegistro = "Oraintxe erroldatu dat BAT, ederto!!";
   }
-  
+  /*cambiaEmpresa(event:Event){
+    this.lantokia=(<HTMLInputElement>event.target).value;
+  }*/
   constructor() {
 
    }
-
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {  }
 
 }
