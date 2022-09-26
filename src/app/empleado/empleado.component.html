@@ -1,1 +1,53 @@
-<p>Hemen jarriko genune langileetako bat</p>
+<div>
+    
+    <p style="color: burlywood"></p>
+    <p style="color: burlywood">
+        Langilearen datuak typescript-ean prestatu eta giltza bikoitz artean expresio erara ekari ditut
+    </p>
+    <p>Langilearen izena: {{nombre}}</p>
+    <p>Langilearen deitura: {{apellido}}</p>
+    
+    <p style="color: burlywood">Langilea adingabea den edo adinduna adierazteko, HTMLan bertan giltza bikoitz artean expresioak erabiliz </p>
+    <p>Langilearen adina: 
+        <span style="color:red">
+            {{edad<18 ?" Adingabea":" Adinduna"}}
+        </span>
+    </p>
+    
+    <p style="color: burlywood">Langilearen adina zehazteko input eta botoi baten bitartez. input-ean idatzi eta botoiak idatzitakoa eramango du</p>
+    <p>Langilearen adina sartu: 
+        <input type="text" #adina>
+        <input type="button" value="sakatu" (click)="adinadeika(adina.value)"/>
+    </p>
+    
+    <p>Langilearen adina: <span style="color:greenyellow">{{adina.value}}</span></p>
+    <p style="color: burlywood">Langileak lantokiaren izena input-ean idatzi ahal agertuko da bere lekuan</p>
+    <p>Lantokiaren izena: 
+        <input type="text" #empresa (keyup)="0" [disabled]="habilitaCuadro">
+        <!--<input type="button" value="sakatu" (click)="lantokideika(empresa.value)"/>-->
+    </p>
+    <p>Langilearen lantokia: <span style="color:greenyellow">{{empresa.value}}</span></p>
+       
+    
+
+    <hr>
+    <h4 style="color: burlywood">HONAKOAN PROPERTY eta EVENT BINDIN (zubia-kanala) CHECKED-EZ CHECKED</h4>
+    <span style="color:greenyellow">{{textoDeRegistro}}</span>
+    <h3>Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado" (click)="setRegistro($event)"/></h3>
+    {{getRegistrousuario()}}
+
+    <hr>
+    <h4 style="color:burlywood">HONAKOAN PROPERTY eta EVENT BINDIN (zubia-kanala) CHECKED-EZ CHECKED</h4>
+    <span style="color:greenyellow">{{erroldaTestua}}</span>
+    
+    <h3>Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuRegistrado" (click)="setUsuarioregistrado($event)"/></h3>
+    <h3>No registrado: <input type="radio" value="no" name="nRegistro" (click)="setUsuarioregistrado($event)"/></h3>
+    
+    {{getRegistrousuario()}}
+
+    <hr>
+    
+    
+    <span style="font-size: 1rem; color: white"><i>Hemengo hau empleado.component konponeneteak egida da <b style="color: yellow">eta empleados.component.html artxiboa kokatu dut</b></i></span>
+</div>
+
